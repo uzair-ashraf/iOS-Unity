@@ -6,7 +6,6 @@ public class BackgroundCleaner : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log(collision);
         if(collision.tag == "Background") {
             float widthOfObject = ((BoxCollider2D)collision).size.x;
             Vector3 position = collision.transform.position;

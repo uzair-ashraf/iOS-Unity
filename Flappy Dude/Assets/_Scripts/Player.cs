@@ -58,4 +58,11 @@ public class Player : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.transform.tag != "Sky") {
+
+            Time.timeScale = 0;
+        }
+    }
 }
